@@ -22,14 +22,16 @@ public class convert{
     System.out.println("Enter a value to convert: ");
     Scanner keyb = new Scanner(System.in);
 
-    // Storing the input value into integer variable
-    int value = keyb.nextInt();
+    // Storing the input value into a float variable
+    float value = keyb.nextFloat();
 
     // taking unit value input and storing in a string variable
-    System.out.println("Enter your preferred unit to convert: ");
+    System.out.println("Enter your preferred unit from the following conversion options (e.g. km): ");
+    System.out.println("1. km <-> mi \n2. cm <-> in \n3. kg <-> g \n4. g <-> oz \n5. C <-> F \n6. L <-> cups" );
     String unit = keyb.next();
 
-    // Conditions to covert the integer value as per the unit entered
+    /* if (){} and else if(){} statements as conditions to covert the entered
+    value as per the unit desired by the user*/
     if (unit.equals("km")){
       System.out.println(value + unit + " is equals to " + (value*.62) + "mi" );
     }
@@ -52,7 +54,7 @@ public class convert{
       System.out.println(value + unit + " is equals to " + (value*0.04)+"oz" );
     }
     else if(unit.equals("oz")){
-      System.out.println(value + unit + " is equals to " + (value*28.25)+"g" );
+      System.out.println(value + unit + " is equals to " + (value*28.35)+"g" );
     }
     else if(unit.equals("C")){
       System.out.println(value + unit + " is equals to " + ((value*(9.0/5.0))+32)+"F" );
@@ -68,8 +70,7 @@ public class convert{
     }
     else{
       System.out.println("Please select from the following units");
-      System.out.println("1. km \n2.mi \n3. cm \n4. in \n5. kg \n6. lb \n7. g"
-      +"\n8.oz \n9. C \n10. F \n11. L \n12. cups" );
+      System.out.println("1. km <-> mi \n2. cm <-> in \n3. kg <-> g \n4. g <-> oz \n5. C <-> F \n6. L <-> cups" );
     }
   }
 }
